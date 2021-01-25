@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu Event</name>
+    <events>
+        <event-group description="" sid="6094157691757374" title="Menu Opções">
+            <sub-events>
+                <comment>Escolhas</comment>
+                <event-block sid="5478167238895882">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="113388529206103" type="Touch">
+                            <param id="0" name="Object">Menu</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9242405280724733" type="Menu">
+                            <param id="0" name="Instance variable">acionar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="317404519651957" type="Audio">
+                            <param id="0" name="Audio file">MissionBell</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="638335362519578" type="Menu">
+                            <param id="0" name="Instance variable">acionar</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="8767589032542501" type="DonCar">
+                            <param id="0" name="X">32000</param>
+                            <param id="1" name="Y">305</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="794104284387262" type="Out">
+                            <param id="0" name="X">32150</param>
+                            <param id="1" name="Y">220</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="4486502557975753" type="OutH">
+                            <param id="0" name="X">32000</param>
+                            <param id="1" name="Y">104</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="7565274801086347" type="Im_tired">
+                            <param id="0" name="X">32250</param>
+                            <param id="1" name="Y">200</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="9850100448831148" type="StopForTheNight">
+                            <param id="0" name="X">32250</param>
+                            <param id="1" name="Y">200</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1072569001627599" type="Menu" />
+                        <action id="-9" name="Destroy" sid="7210091041178854" type="Titulo" />
+                        <action id="-15" name="Set visible" sid="2614386469452323" type="Out">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8631303097110358" type="OutH">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="9361772667176993" type="Out" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="3681596771738803" type="OutH" />
+                        <action id="-16" name="Wait" sid="883208985577276" type="System">
+                            <param id="0" name="Seconds">12.0</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="163098053245079" type="Audio">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="dB">-3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="680531607460587" type="Im_tired">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="3992529109068209" type="Im_tired" />
+                        <action id="-16" name="Wait" sid="2344634910909712" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="555590821384240" type="Audio">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="dB">-5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7065047995700173" type="Im_tired" />
+                        <action id="-16" name="Wait" sid="4629684048388179" type="System">
+                            <param id="0" name="Seconds">0.0</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="695421556817424" type="Audio">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="dB">-7</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1922276456736332" type="StopForTheNight">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3913739472185481" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="950986268005466" type="Audio">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="dB">-10</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="475251771359004" type="FadeBack">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="4129494188263998" type="FadeBack" />
+                        <action id="-16" name="Wait" sid="2843166925287589" type="System">
+                            <param id="0" name="Seconds">6.0</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="342881654225233" type="Audio">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="dB">-15</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="5947906563345808" type="System">
+                            <param id="0" name="Layout">Estacionamento</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="460323891361388">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="284582664519258" type="DonCar">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="X co-ordinate">31000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="858945704995382" type="Menu">
+                            <param id="0" name="Instance variable">acionar</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="934528100993440">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="510882514387709" type="DonCar">
+                            <param id="0" name="Object">BackupTransition</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="811656333456443" type="System">
+                            <param id="0" name="Layout">Estacionamento</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8200038750501821" title="Movimentos">
+            <sub-events>
+                <event-block sid="4840388217451195">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6614079159287164" type="DonCar">
+                            <param id="0" name="Instance variable">movimentoauto</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7493720883936068" type="DonCar">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="505008070013601" type="DonCar">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1616027262821056">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="4593759884743072" type="DonCar" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="2319799216825253" type="Titulo">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="4072552697760373" type="Menu">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="3073634165835078" type="OutH">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="7322164205802574" type="Out">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="9516801838665303" type="Im_tired">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="7470654257969121" type="StopForTheNight">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="729952951557494" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="4423992889481162" type="Begin" />
+                        <action id="-16" name="Wait" sid="6557518685347773" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9918027580694559" type="Titulo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="6210696589347288" type="Titulo" />
+                        <action id="-16" name="Wait" sid="4373091355444151" type="System">
+                            <param id="0" name="Seconds">3.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7597077901672778" type="Menu">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="3717647185252766" type="Menu" />
+                        <action id="-16" name="Wait" sid="5720409473984465" type="System">
+                            <param id="0" name="Seconds">3.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="512753717385786" type="Menu">
+                            <param id="0" name="Instance variable">acionar</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="845506823890429">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="803720494982463" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="218488755790014" type="Audio">
+                    <param id="0" name="Audio file">HotelAcoustic</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="152063051442864" type="Audio">
+                    <param id="0" name="Audio file">Car</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="265828574508762">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="875303997693267" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="717917402023872" type="Audio" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

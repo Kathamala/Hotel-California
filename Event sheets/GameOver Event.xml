@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameOver Event</name>
+    <events>
+        <comment>1- DeathByMagia; 3- DeathByDemon</comment>
+        <variable constant="0" name="DeadWhere" sid="409323347975369" static="0" type="number">0</variable>
+        <event-group description="" sid="163158366473003" title="GameOverOptions">
+            <sub-events>
+                <event-block sid="816556660441077">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="856555814039523" type="Touch">
+                            <param id="0" name="Object">SetaB</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="479499804800968" type="GameOverOptions">
+                            <param id="0" name="Animation">&quot;Over1&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="461338065334245" type="GameOverOptions">
+                            <param id="0" name="Instance variable">Acionar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="235676761003289" type="System">
+                            <param id="0" name="Seconds">0.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="545446821537611" type="GameOverOptions">
+                            <param id="0" name="Animation">&quot;Over2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="713847654544622">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="679861403737663" type="Touch">
+                            <param id="0" name="Object">SetaC</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="260002921458162" type="GameOverOptions">
+                            <param id="0" name="Animation">&quot;Over1&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="850068681023284" type="GameOverOptions">
+                            <param id="0" name="Instance variable">Acionar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="463176648400764" type="System">
+                            <param id="0" name="Seconds">0.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="250036102806351" type="GameOverOptions">
+                            <param id="0" name="Animation">&quot;Over2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="808420407236905">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="608147318132622" type="Touch">
+                            <param id="0" name="Object">SetaC</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="182592088648638" type="GameOverOptions">
+                            <param id="0" name="Animation">&quot;Over2&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="174390289630546" type="GameOverOptions">
+                            <param id="0" name="Instance variable">Acionar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="498865832266424" type="System">
+                            <param id="0" name="Seconds">0.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="176510157911526" type="GameOverOptions">
+                            <param id="0" name="Animation">&quot;Over1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="382295742200248">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="253177016408359" type="Touch">
+                            <param id="0" name="Object">SetaB</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="476021492588630" type="GameOverOptions">
+                            <param id="0" name="Animation">&quot;Over2&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="110299733965124" type="GameOverOptions">
+                            <param id="0" name="Instance variable">Acionar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="834791944452736" type="System">
+                            <param id="0" name="Seconds">0.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="958443112782506" type="GameOverOptions">
+                            <param id="0" name="Animation">&quot;Over1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Escolhas</comment>
+                <event-block sid="599045018977533">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="159683285160284" type="Touch">
+                            <param id="0" name="Object">SetaBotao</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="447300192332615" type="GameOverOptions">
+                            <param id="0" name="Animation">&quot;Over1&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="676994696954714" type="GameOverOptions">
+                            <param id="0" name="Instance variable">Acionar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="741560005108860" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="652232434715765" type="System">
+                            <param id="0" name="Variable">GreatHall_Acessado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="860967707590117" type="System">
+                            <param id="0" name="Variable">Iniciation</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="655603079389001" type="System">
+                            <param id="0" name="Layout">GreatHall</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="231085655146664">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="392129882112037" type="Touch">
+                            <param id="0" name="Object">SetaBotao</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="567291460327159" type="GameOverOptions">
+                            <param id="0" name="Animation">&quot;Over2&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="930541263610796" type="GameOverOptions">
+                            <param id="0" name="Instance variable">Acionar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="550537270693569" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="493156594502405" type="System" />
+                        <action id="-2" name="Go to layout" sid="856754976835111" type="System">
+                            <param id="0" name="Layout">menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="382456055447113">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="588193092250023" type="System" />
+                <condition id="-14" name="Compare variable" sid="341785918589946" type="System">
+                    <param id="0" name="Variable">DeadWhere</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="391372481716283" type="GameOverOptions">
+                    <param id="0" name="Instance variable">Acionar</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="165555057373283">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="745816695998006" type="System">
+                    <param id="0" name="Variable">DeadWhere</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="157969546411237" type="GameOverOptions">
+                    <param id="0" name="X">454</param>
+                    <param id="1" name="Y">335</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="799006644785867">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="348575728486283" type="System">
+                    <param id="0" name="Variable">DeadWhere</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="795891927447194" type="GameOverOptions">
+                    <param id="0" name="X">420</param>
+                    <param id="1" name="Y">540</param>
+                </action>
+                <action id="-16" name="Wait" sid="258419038377637" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="985639099674130" type="System" />
+                <action id="33" name="Stop all" sid="157680571012414" type="Audio" />
+                <action id="-9" name="Set value" sid="747216425489066" type="System">
+                    <param id="0" name="Variable">KeyDiamond</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="286563216751032" type="System">
+                    <param id="0" name="Layout">menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

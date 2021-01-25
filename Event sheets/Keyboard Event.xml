@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Keyboard Event</name>
+    <events>
+        <variable constant="0" name="Keyboard_QuartoEaster" sid="368125648325619" static="0" type="number">0</variable>
+        <variable constant="0" name="Code" sid="959792872013034" static="0" type="text"></variable>
+        <event-block sid="607838722309191">
+            <conditions>
+                <condition id="17" name="On tap object" sid="164388901067354" type="Touch">
+                    <param id="0" name="Object">SpriteFontInput</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="798246355791962" type="System">
+                    <param id="0" name="First value">len(SpriteFontOutput.Text)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Append text" sid="746462472142704" type="SpriteFontOutput">
+                    <param id="0" name="Text">SpriteFontInput.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="531014957078774">
+            <conditions>
+                <condition id="17" name="On tap object" sid="998532913636476" type="Touch">
+                    <param id="0" name="Object">Apagar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="882138381340385" type="SpriteFontOutput">
+                    <param id="0" name="Text">left((self.text), len(self.text)-1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="934402237601459">
+            <conditions>
+                <condition id="17" name="On tap object" sid="327081631951142" type="Touch">
+                    <param id="0" name="Object">Ok</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="870960231979784" type="System">
+                    <param id="0" name="Variable">Code</param>
+                    <param id="1" name="Value">SpriteFontOutput.text</param>
+                </action>
+                <action id="-16" name="Wait" sid="374843209271297" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="150985444864540" type="System">
+                    <param id="0" name="Variable">Keyboard_QuartoEaster</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="485829433534783" type="System">
+                    <param id="0" name="Layout">QuartoEaster</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

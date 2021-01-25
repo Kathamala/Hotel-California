@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Reception Event</name>
+    <events>
+        <variable constant="0" name="Corredor_Um_Reception" sid="892602319063079" static="0" type="number">0</variable>
+        <variable constant="0" name="Estacionamento_Reception" sid="817532685774714" static="0" type="number">0</variable>
+        <variable constant="0" name="Reception_Acessado" sid="915419610463354" static="0" type="number">0</variable>
+        <event-block sid="74111786108257">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9891252599577075" type="System">
+                    <param id="0" name="Variable">Reception_Acessado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="9113695148626115" type="MulherCorredor">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="-10" name="Set value" sid="711494924619778" type="MulherCorredor">
+                    <param id="0" name="Instance variable">Direção</param>
+                    <param id="1" name="Value">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="180399866080010">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="382251413916217" type="MulherCorredor">
+                    <param id="0" name="Object">ToCentro</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="322997269194795" type="Audio">
+                    <param id="0" name="Audio file">OpenDoor</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="418911622313680" type="System">
+                    <param id="0" name="Variable">Reception_Acessado</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="822619175689646" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-10" name="Set value" sid="714604501799388" type="MulherCorredor">
+                    <param id="0" name="Instance variable">Direção</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="481417443744442" title="Movimento Magia3">
+            <sub-events>
+                <event-block sid="754546298814406">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="625067549489616" type="MulherCorredor" />
+                        <condition id="-7" name="Compare instance variable" sid="995907971376519" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="536440745105367" type="MulherCorredor">
+                            <param id="0" name="Animation">&quot;Parada_Esquerda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="321089145102778">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="459477166832066" type="MulherCorredor" />
+                        <condition id="-7" name="Compare instance variable" sid="503659380256233" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="101817592747736" type="MulherCorredor">
+                            <param id="0" name="Animation">&quot;Parada_Direita&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="995567688856218">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="800910276227430" type="MulherCorredor" />
+                        <condition id="-7" name="Compare instance variable" sid="389978689672452" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="511264242974295" type="MulherCorredor">
+                            <param id="0" name="Animation">&quot;Parada_Cima&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="716803506323457">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="702381947894149" type="MulherCorredor" />
+                        <condition id="-7" name="Compare instance variable" sid="460209888512573" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="975271577906516" type="MulherCorredor">
+                            <param id="0" name="Animation">&quot;Parada_Baixo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="287352480401532">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="496654461803743" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="287265332284467" type="MulherCorredor">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="978979824894621" type="MulherCorredor">
+                            <param id="0" name="Animation">&quot;Esquerda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="520961551163621" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="479103735359998">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="367579760555419" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="840449001836271" type="MulherCorredor">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="359801325078565" type="MulherCorredor">
+                            <param id="0" name="Animation">&quot;Direita&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="476779331946583" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="476923404242763">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="945141026747546" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="662375287668748" type="MulherCorredor">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="220542682734610" type="MulherCorredor">
+                            <param id="0" name="Animation">&quot;Cima&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="163473087066933" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="391115913743973">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="170157712445163" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="479288488636839" type="MulherCorredor">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="943833813721077" type="MulherCorredor">
+                            <param id="0" name="Animation">&quot;Baixo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="632286413382068" type="MulherCorredor">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="936694917622914" title="Movimento DonReception">
+            <sub-events>
+                <event-block sid="270999453240882">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="215965661494180" type="Plataforma" />
+                        <condition id="-7" name="Compare instance variable" sid="481419869408015" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="962860920592883" type="DonFrey">
+                            <param id="0" name="Animation">&quot;parado_esquerda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="413507208839361">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="149632886733881" type="Plataforma" />
+                        <condition id="-7" name="Compare instance variable" sid="120861369938433" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="499188352586928" type="DonFrey">
+                            <param id="0" name="Animation">&quot;parado_direita&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="214544717375597">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="704980974065387" type="Plataforma" />
+                        <condition id="-7" name="Compare instance variable" sid="565344285443457" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="201499823141491" type="DonFrey">
+                            <param id="0" name="Animation">&quot;parado_cima&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="232877527655673">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="188260974956351" type="Plataforma" />
+                        <condition id="-7" name="Compare instance variable" sid="799471016814613" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="573949332350550" type="DonFrey">
+                            <param id="0" name="Animation">&quot;parado_baixo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="302075591737100">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="516797634802596" type="Touch">
+                            <param id="0" name="Object">SetaE</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="617873858951025" type="Touch">
+                            <param id="0" name="Object">SetaD</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="433907854226301" type="Touch">
+                            <param id="0" name="Object">SetaC</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="842295998229406" type="Touch">
+                            <param id="0" name="Object">SetaB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="711753746004051" type="Plataforma">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="276190923622231" type="DonFrey">
+                            <param id="0" name="Animation">&quot;esquerda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="689512417677819" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="273615435735086">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="874241276170547" type="Touch">
+                            <param id="0" name="Object">SetaE</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="807978226272733" type="Touch">
+                            <param id="0" name="Object">SetaD</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="319861688190002" type="Touch">
+                            <param id="0" name="Object">SetaC</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="653548510974827" type="Touch">
+                            <param id="0" name="Object">SetaB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="779838420878234" type="Plataforma">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="841411917458420" type="Plataforma">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="791384002538956" type="DonFrey">
+                            <param id="0" name="Animation">&quot;esquerda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="245212042392856" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="944824076826528">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="444277544949724" type="Touch">
+                            <param id="0" name="Object">SetaE</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="357691561384159" type="Touch">
+                            <param id="0" name="Object">SetaD</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="495823673655331" type="Touch">
+                            <param id="0" name="Object">SetaC</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="686268362018016" type="Touch">
+                            <param id="0" name="Object">SetaB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="149335801170364" type="Plataforma">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="786035123336116" type="Plataforma">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="532273811403532" type="DonFrey">
+                            <param id="0" name="Animation">&quot;esquerda&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="544868595763943" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="206964764912375">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="336396187085272" type="Touch">
+                            <param id="0" name="Object">SetaE</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="442565519844684" type="Touch">
+                            <param id="0" name="Object">SetaD</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="778311261003462" type="Touch">
+                            <param id="0" name="Object">SetaC</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="289901719770018" type="Touch">
+                            <param id="0" name="Object">SetaB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="807752228667573" type="Plataforma">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="845684712968044" type="DonFrey">
+                            <param id="0" name="Animation">&quot;direita&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="309539321401572" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="748443531419181">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="321248075383841" type="Touch">
+                            <param id="0" name="Object">SetaE</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="534404650058448" type="Touch">
+                            <param id="0" name="Object">SetaD</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="218911439943244" type="Touch">
+                            <param id="0" name="Object">SetaC</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="528749937693007" type="Touch">
+                            <param id="0" name="Object">SetaB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="530754561961990" type="Plataforma">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="263699918801746" type="Plataforma">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="845635185314182" type="DonFrey">
+                            <param id="0" name="Animation">&quot;direita&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="310014319653668" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="928580441857192">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="359624039199587" type="Touch">
+                            <param id="0" name="Object">SetaE</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="549894099327781" type="Touch">
+                            <param id="0" name="Object">SetaD</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="415567823080602" type="Touch">
+                            <param id="0" name="Object">SetaC</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="781039443164199" type="Touch">
+                            <param id="0" name="Object">SetaB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="713809723500335" type="Plataforma">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="382959833717579" type="Plataforma">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="917081164658365" type="DonFrey">
+                            <param id="0" name="Animation">&quot;direita&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="860080918994536" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="597375344636406">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="476803257237346" type="Touch">
+                            <param id="0" name="Object">SetaE</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="396603077472120" type="Touch">
+                            <param id="0" name="Object">SetaD</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="657188536163558" type="Touch">
+                            <param id="0" name="Object">SetaC</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="515554017135109" type="Touch">
+                            <param id="0" name="Object">SetaB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="899929428925863" type="Plataforma">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="671582269184642" type="DonFrey">
+                            <param id="0" name="Animation">&quot;cima&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="736192008335844" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="671935290463156">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="121979834976338" type="Touch">
+                            <param id="0" name="Object">SetaE</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="167355083884191" type="Touch">
+                            <param id="0" name="Object">SetaD</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="620506570601473" type="Touch">
+                            <param id="0" name="Object">SetaC</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="324756107497768" type="Touch">
+                            <param id="0" name="Object">SetaB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="870541813610717" type="Plataforma">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="543984960702899" type="DonFrey">
+                            <param id="0" name="Animation">&quot;baixo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="478483131413712" type="DonFrey">
+                            <param id="0" name="Instance variable">Direção</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="7267942531034756">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2254763123042682" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set volume" sid="959503567110983" type="Audio">
+                    <param id="0" name="Tag">&quot;Main&quot;</param>
+                    <param id="1" name="dB">0</param>
+                </action>
+                <action id="3" name="Set volume" sid="793897111731134" type="Audio">
+                    <param id="0" name="Tag">&quot;Rain&quot;</param>
+                    <param id="1" name="dB">-15</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5675848128966049" type="DonFrey">
+                    <param id="0" name="Pin to">Plataforma</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="131114726701241" type="Luz_Mulher_Corredor">
+                    <param id="0" name="Pin to">MulherCorredor</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6703734924855024">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="3127994730167576" type="DonFrey">
+                    <param id="0" name="Object">ToCentro</param>
+                </condition>
+                <condition id="4" name="Is touching object" sid="517006964016126" type="Touch">
+                    <param id="0" name="Object">SetaBotao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="310528907285438" type="ToCentro">
+                    <param id="0" name="Animation">&quot;Open&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="949690312994993" type="System">
+                    <param id="0" name="Group name">&quot;Movimento Don&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="654424118031279" type="Plataforma">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="350014195350871" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="3799502911565166" type="System">
+                    <param id="0" name="Layout">Corredor_Um</param>
+                </action>
+                <action id="-9" name="Set value" sid="989747621725098" type="System">
+                    <param id="0" name="Variable">Reception_Acessado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="905713665035639" type="System">
+                    <param id="0" name="Variable">Reception_Corredor_Um</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="352287597265708" type="System">
+                    <param id="0" name="Variable">Estacionamento_Reception</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="474079921187870" type="System">
+                    <param id="0" name="Variable">Rooms_Corredor_Um</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="222814691959150" type="System">
+                    <param id="0" name="Variable">Corredor_Um_Reception</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="602137149995099" type="Plataforma">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="968837899297921">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="281128708163133" type="Plataforma">
+                    <param id="0" name="Object">Door</param>
+                </condition>
+                <condition id="4" name="Is touching object" sid="118826996443207" type="Touch">
+                    <param id="0" name="Object">SetaBotao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="409057304392345" type="System">
+                    <param id="0" name="Group name">&quot;Movimento Don&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="779685025030919" type="Plataforma">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="999470713058791" type="Door">
+                    <param id="0" name="Animation">&quot;Open&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="756958976768990" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="592976436570846" type="System">
+                    <param id="0" name="Layout">Estacionamento</param>
+                </action>
+                <action id="-9" name="Set value" sid="469861374384108" type="System">
+                    <param id="0" name="Variable">Reception_Corredor_Um</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="425594644257689" type="System">
+                    <param id="0" name="Variable">Estacionamento_Reception</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="916153451453581" type="System">
+                    <param id="0" name="Variable">Rooms_Corredor_Um</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="501547991612501" type="System">
+                    <param id="0" name="Variable">Corredor_Um_Reception</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="309262405191651" type="Plataforma">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="933070905967096">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="411238807713392" type="System">
+                    <param id="0" name="Variable">Estacionamento_Reception</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="895586793765830" type="Plataforma">
+                    <param id="0" name="X">304</param>
+                    <param id="1" name="Y">1099</param>
+                </action>
+                <action id="-3" name="Set position" sid="690284218304858" type="DonFrey">
+                    <param id="0" name="X">304</param>
+                    <param id="1" name="Y">1099</param>
+                </action>
+                <action id="-9" name="Set value" sid="289507718295536" type="System">
+                    <param id="0" name="Variable">Estacionamento_Reception</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="972534084650944">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="447643578264839" type="System">
+                    <param id="0" name="Variable">Corredor_Um_Reception</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="452358273160692" type="Plataforma">
+                    <param id="0" name="X">305</param>
+                    <param id="1" name="Y">148</param>
+                </action>
+                <action id="-3" name="Set position" sid="864698582043018" type="DonFrey">
+                    <param id="0" name="X">305</param>
+                    <param id="1" name="Y">148</param>
+                </action>
+                <action id="-9" name="Set value" sid="507462349457964" type="System">
+                    <param id="0" name="Variable">Corredor_Um_Reception</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="664952220038687" type="System">
+                    <param id="0" name="Variable">Reception_Acessado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="485130566436035">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="739113550325753" type="System">
+                    <param id="0" name="Variable">Reception_Acessado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="400358577752332" type="MulherCorredor" />
+            </actions>
+        </event-block>
+        <event-block sid="655877563247496">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="380583995688920" type="System" />
+                <condition id="-14" name="Compare variable" sid="907653428538399" type="System">
+                    <param id="0" name="Variable">GreatHall_Acessado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="820311334434381" type="MulherCorredor" />
+                <action id="-9" name="Destroy" sid="588291771891577" type="Luz_Mulher_Corredor" />
+                <action id="-16" name="Wait" sid="187991863501906" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="-3" name="Set position" sid="774814404806486" type="Demon">
+                    <param id="0" name="X">305</param>
+                    <param id="1" name="Y">148</param>
+                </action>
+                <action id="-3" name="Set position" sid="408601312207042" type="NPCMan">
+                    <param id="0" name="X">305</param>
+                    <param id="1" name="Y">148</param>
+                </action>
+                <action id="-3" name="Set position" sid="902531115606510" type="NPCWom">
+                    <param id="0" name="X">305</param>
+                    <param id="1" name="Y">148</param>
+                </action>
+                <action id="-3" name="Set position" sid="511421145468960" type="NPCSpecial">
+                    <param id="0" name="X">305</param>
+                    <param id="1" name="Y">148</param>
+                </action>
+                <action id="-10" name="Set value" sid="727262238595517" type="Demon">
+                    <param id="0" name="Instance variable">CanKill</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="164299368325065" type="Demon" />
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="775893992507938" type="NPCMan">
+                    <param id="0" name="Obstacle">TiledBackground36</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="246308823908770" type="NPCMan">
+                    <param id="0" name="Obstacle">TiledBackground16</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="613267317827657" type="NPCMan">
+                    <param id="0" name="Obstacle">TiledBackground29</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="775785309468196" type="NPCMan">
+                    <param id="0" name="Obstacle">TiledBackground31</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="284590013363528" type="NPCMan">
+                    <param id="0" name="Obstacle">TiledBackground28</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="746544042900896" type="NPCMan">
+                    <param id="0" name="Obstacle">TiledBackground15</param>
+                </action>
+                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="684539521720921" type="NPCMan" />
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="634957005475747" type="NPCWom">
+                    <param id="0" name="Obstacle">TiledBackground36</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="582558658626643" type="NPCWom">
+                    <param id="0" name="Obstacle">TiledBackground16</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="693937866606782" type="NPCWom">
+                    <param id="0" name="Obstacle">TiledBackground29</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="606607177864127" type="NPCWom">
+                    <param id="0" name="Obstacle">TiledBackground31</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="252076406189327" type="NPCWom">
+                    <param id="0" name="Obstacle">TiledBackground28</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="362685688461515" type="NPCWom">
+                    <param id="0" name="Obstacle">TiledBackground15</param>
+                </action>
+                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="775487450212117" type="NPCWom" />
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="850538727933205" type="NPCSpecial">
+                    <param id="0" name="Obstacle">TiledBackground36</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="442552760670339" type="NPCSpecial">
+                    <param id="0" name="Obstacle">TiledBackground16</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="388550209031041" type="NPCSpecial">
+                    <param id="0" name="Obstacle">TiledBackground29</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="458257345256855" type="NPCSpecial">
+                    <param id="0" name="Obstacle">TiledBackground31</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="379812289451393" type="NPCSpecial">
+                    <param id="0" name="Obstacle">TiledBackground28</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="946977447252260" type="NPCSpecial">
+                    <param id="0" name="Obstacle">TiledBackground15</param>
+                </action>
+                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="255567569295356" type="NPCSpecial" />
+            </actions>
+        </event-block>
+        <event-block sid="560635385352356">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="154707838889665" type="Demon">
+                    <param id="0" name="Object">DonFrey</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="221758677384362" type="System">
+                    <param id="0" name="Variable">GreatHall_Acessado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="244524677093507" type="System">
+                    <param id="0" name="Group name">&quot;Finding4&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="282176081825890" type="Demon">
+                    <param id="0" name="Animation">&quot;Moving&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="876729640274094">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="605763974416793" type="Demon">
+                    <param id="0" name="Object">DonFrey</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="723744780996220" type="System">
+                    <param id="0" name="Variable">GreatHall_Acessado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="348290327938230" type="System">
+                    <param id="0" name="Group name">&quot;Finding4&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="2" name="Stop" sid="522402921155342" type="Demon" />
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="364969725999826" title="Finding4">
+            <sub-events>
+                <event-block sid="463345397984172">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="381292769511207" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="470042124362733" type="Demon">
+                            <param id="0" name="X">DonFrey.X</param>
+                            <param id="1" name="Y">DonFrey.Y</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="674839629630057" type="NPCMan">
+                            <param id="0" name="X">DonFrey.X</param>
+                            <param id="1" name="Y">DonFrey.Y</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="523665847073491" type="NPCWom">
+                            <param id="0" name="X">DonFrey.X</param>
+                            <param id="1" name="Y">DonFrey.Y</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="733927366062812" type="NPCSpecial">
+                            <param id="0" name="X">DonFrey.X</param>
+                            <param id="1" name="Y">DonFrey.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="306671769609997">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="721017382482404" type="Demon" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="497150201942971" type="Demon" />
+                    </actions>
+                </event-block>
+                <event-block sid="527500641344014">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="415410285844700" type="NPCMan" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="237790229596751" type="NPCMan" />
+                    </actions>
+                </event-block>
+                <event-block sid="881890684976839">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="274174596533232" type="NPCWom" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="640980360467679" type="NPCWom" />
+                    </actions>
+                </event-block>
+                <event-block sid="321209964546247">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="725447396263195" type="NPCSpecial" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="890701670187605" type="NPCSpecial" />
+                    </actions>
+                </event-block>
+                <event-block sid="249837738295878">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="242438243224996" type="Demon" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="256418078055516" type="Demon">
+                            <param id="0" name="X">DonFrey.X</param>
+                            <param id="1" name="Y">DonFrey.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="147958290781965">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="628516669775326" type="NPCMan" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="920555011929087" type="NPCMan">
+                            <param id="0" name="X">DonFrey.X</param>
+                            <param id="1" name="Y">DonFrey.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="538877685162757">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="392006141877449" type="NPCWom" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="479141143810867" type="NPCWom">
+                            <param id="0" name="X">DonFrey.X</param>
+                            <param id="1" name="Y">DonFrey.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="240205469137732">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="122520015234778" type="NPCSpecial" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="358901511692653" type="NPCSpecial">
+                            <param id="0" name="X">DonFrey.X</param>
+                            <param id="1" name="Y">DonFrey.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="430961017040448">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="978250869765551" type="Demon">
+                    <param id="0" name="Object">DonFrey</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="626956794358148" type="Demon">
+                    <param id="0" name="Instance variable">CanKill</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="603007930749715" type="Plataforma">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="712092479267429" type="System">
+                    <param id="0" name="Group name">&quot;Movimento Don&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="117984888704957" type="System">
+                    <param id="0" name="Group name">&quot;Finding4&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="986367790231054" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="324374091874587" type="System">
+                    <param id="0" name="Variable">DeadWhere</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="349439344611134" type="System">
+                    <param id="0" name="Layout">GameOver</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="567020088340545">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="738817893587175" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="627389920096291" type="NPCSpecial">
+                    <param id="0" name="Animation">&quot;Serj_AndandoBaixo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
